@@ -1,0 +1,19 @@
+ID: CHECK_GIT
+_schema-version: '2.0'
+version: 0.0.1
+
+modules:
+ - name: ddd
+   type: hdb
+   path: ddd
+   requires:
+    - name: hdi-container
+
+resources:
+ - name: hdi-container
+   parameters:
+      config:
+         schema: VIV
+   properties:
+      hdi-container-name: ${service-name}
+   type: com.sap.xs.hdi-container
